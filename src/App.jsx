@@ -5,25 +5,27 @@ import Sidebar from './components/Sidebar.jsx'
 import BottomNav from './components/BottomNav.jsx'
 import MobileHeader from './components/MobileHeader.jsx'
 import Dashboard from './pages/Dashboard.jsx'
+import RequestCar from './pages/RequestCar.jsx'
+import StockManager from './pages/StockManager.jsx'
 import CurrentStock from './pages/CurrentStock.jsx'
-import Monthly from './pages/Monthly.jsx'
-import History from './pages/History.jsx'
 import Monitor from './pages/Monitor.jsx'
-import Allocate from './pages/Allocate.jsx'
+import Monthly from './pages/Monthly.jsx'
 import Report from './pages/Report.jsx'
+import History from './pages/History.jsx'
 import UserManagement from './pages/UserManagement.jsx'
 import Settings from './pages/Settings.jsx'
 
 const ALL_PAGES = {
-  dashboard: { component:Dashboard,     label:'ภาพรวม',         roles:['admin','stock','manager','sc'] },
-  monitor:   { component:Monitor,        label:'Monitor สต๊อก',  roles:['admin','stock','manager'] },
-  stock:     { component:CurrentStock,   label:'สต๊อกปัจจุบัน', roles:['admin','stock','manager','sc'] },
-  allocate:  { component:Allocate,       label:'จับคู่สต๊อก',    roles:['admin','stock','manager'] },
-  monthly:   { component:Monthly,        label:'รายงานรายเดือน', roles:['admin','stock','manager'] },
-  report:    { component:Report,         label:'สรุปรายงาน',     roles:['admin','stock','manager'] },
-  history:   { component:History,        label:'ประวัติการขาย',  roles:['admin','stock','manager'] },
-  users:     { component:UserManagement, label:'จัดการผู้ใช้',   roles:['admin'] },
-  settings:  { component:Settings,       label:'ตั้งค่า',         roles:['admin','stock'] },
+  dashboard:  { component:Dashboard,      label:'ภาพรวม',         roles:['admin','stock','manager','sc'] },
+  request:    { component:RequestCar,     label:'คำขอรถ',          roles:['admin','stock','manager','sc'] },
+  stockmgr:   { component:StockManager,   label:'จัดการสต๊อก',    roles:['admin','stock'] },
+  stock:      { component:CurrentStock,   label:'สต๊อกปัจจุบัน',  roles:['admin','stock','manager','sc'] },
+  monitor:    { component:Monitor,        label:'Monitor',         roles:['admin','stock','manager'] },
+  monthly:    { component:Monthly,        label:'รายงานเดือน',     roles:['admin','stock','manager'] },
+  report:     { component:Report,         label:'สรุปรายงาน',      roles:['admin','stock','manager'] },
+  history:    { component:History,        label:'ประวัติการขาย',   roles:['admin','stock','manager'] },
+  users:      { component:UserManagement, label:'จัดการผู้ใช้',    roles:['admin'] },
+  settings:   { component:Settings,       label:'ตั้งค่า',          roles:['admin','stock'] },
 }
 
 export default function App() {
